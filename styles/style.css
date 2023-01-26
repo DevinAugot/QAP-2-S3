@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+    --primary: #aa8439;
+    --dark: #803c15;
+    --light: #ffe3aa;
+    --shadow: 0 1px 5px rgba(105, 105, 105, 0.8);
+  }
