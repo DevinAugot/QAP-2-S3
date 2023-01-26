@@ -1,7 +1,7 @@
 //we need a http server
 const http = require("http");
 //I like to modularize my code... so put the routes in their own file
-const routes = require("./routes");
+const routes = require("./routes.js");
 
 const server = http.createServer((request, response) => {
   let path = "./views/";
@@ -29,16 +29,15 @@ const server = http.createServer((request, response) => {
       routes.subscribePage(path, request.url, response);
       break;
     case "/aboutMe":
+      path += "aboutMe.html";
+      response.statusCode = 200;
+      routes.subscribePage(path, request.url, response);
+      break;
+    case "/about-me":
       // this is a redirect for a deprecated route
       response.statusCode = 301;
       response.setHeader("Location", "/about");
       response.end();
-      break;
-    case "/synchronous":
-      routes.synchronous("./files/", "sync file mgmt", response);
-      break;
-    case "/asynchronous":
-      routes.asynchronous("./files/", "async file mgmt", response);
       break;
     default:
       path += "404.html";
