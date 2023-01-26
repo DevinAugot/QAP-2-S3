@@ -1,0 +1,3 @@
+# QAP-2-S3
+The second QAP for semester 3  
+web server using http, fs, sync and async read/write, daily logs of system etc...
