@@ -1,7 +1,7 @@
 //we need a http server
 const http = require("http");
 //I like to modularize my code... so put the routes in their own file
-const routes = require("./routes.js");
+const routes = require("./routes");
 
 const server = http.createServer((request, response) => {
   let path = "./views/";
