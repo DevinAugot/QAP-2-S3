@@ -1,0 +1,25 @@
+{
+  "name": "qap-2-s3",
+  "version": "1.0.0",
+  "description": "qap-2-s3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevinAugot/QAP-2-S3.git"
+  },
+  "author": "Devin Augot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevinAugot/QAP-2-S3/issues"
+  },
+  "homepage": "https://github.com/DevinAugot/QAP-2-S3#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "nodemon": "^2.0.20",
+    "routes": "^2.1.0"
+  }
+}
