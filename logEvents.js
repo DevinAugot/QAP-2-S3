@@ -8,7 +8,7 @@ const logEvents = async (event, level, message) => {
   const dateTime = `${format(new Date(), "yyyyMMdd\tHH:mm:ss")}`;
   const logItem = `${dateTime}\t${level}\t${event}\t${message}\t${uuid()}`;
 
-  // making sure file exsists if it doesnt it will make a directory for the logs
+  // check if file exsists if it doesnt it will make a directory for the logs
   try {
     if (!fs.existsSync(path.join(__dirname, "logs"))) {
       await fsPromises.mkdir(path.join(__dirname, "logs"));
