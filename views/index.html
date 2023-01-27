@@ -1,22 +1,162 @@
+<!--  Author: Devin Augot 
+Date: Jan,26,2023  -->
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <style href="../styles/style.css"></style>
+    <!-- <base href="/" /> -->
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
+      :root {
+        --Headbg: rgb(0, 0, 0);
+        --bg: rgb(255, 255, 255);
+        --light: rgba(2, 232, 232, 0.357);
+        --primary: rgb(0, 113, 174);
+        --shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Full-Stack JavaScript Week Four</title>
   </head>
   <body>
-    <h1>Full-Stack JavaScript Week Four</h1>
-    <h2>
-      With hard work and focus you will create a deeper understanding of node
-      and coding for the full-stack.
-      <br />
-      <br />
-      <li><a href="http://localhost:3000/index">index page</a></li>
-      <li><a href="http://localhost:3000/about">about page</a></li>
-      <li><a href="http://localhost:3000/aboutMe">about Me page</a></li>
-      <li><a href="http://localhost:3000/contact">contact page</a></li>
-      <li><a href="http://localhost:3000/subscribe">Subscribe page</a></li>
-    </h2>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
+      :root {
+        --Headbg: rgb(0, 0, 0);
+        --bg: rgb(255, 255, 255);
+        --light: rgba(2, 232, 232, 0.357);
+        --primary: rgb(0, 113, 174);
+        --shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+      }
+      body {
+        background-color: var(--bg);
+        display: grid;
+        gap: 25px;
+      }
+
+      /* Home Page */
+      .main-header {
+        display: grid;
+        width: auto;
+        height: 100px;
+        border: 1px solid black;
+        background-color: var(--Headbg);
+        color: rgb(255, 255, 254);
+      }
+      #header-h1 {
+        padding-top: 0.0125rem;
+        display: flex;
+        font-size: 2rem;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      #h1-div {
+        padding: 20px;
+      }
+
+      /* styling navlist */
+      #navlist {
+        background-color: #0074d900;
+        position: absolute;
+        width: 100%;
+      }
+      /* styling navlist anchor element */
+      #navlist a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 30px;
+        text-decoration: none;
+        font-size: 15px;
+      }
+      .navlist-right {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        float: right;
+      }
+      /* hover effect of navlist anchor element */
+      #navlist a:hover {
+        color: aqua;
+        transition: 0.3s;
+      }
+
+      #Contact-heading {
+        width: auto;
+      }
+      .Contact-div {
+        padding-top: 20px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        display: grid;
+        justify-content: center;
+      }
+      a {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        color: black;
+      }
+
+      .footer-contact {
+        border-top: 1px solid;
+
+        width: 100%;
+        bottom: 0px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+    </style>
+
+    <header class="main-header">
+      <div id="h1-div"><h4 id="header-h1">Home Page</h4></div>
+      <div id="navlist">
+        <div class="navlist-right">
+          <a href="http://localhost:3000">Home</a>
+          <a href="http://localhost:3000/about">About</a>
+          <a href="http://localhost:3000/products">Products</a>
+          <a href="http://localhost:3000/infoMe">Personal Info</a>
+          <a href="http://localhost:3000/subscribe">Subscribe</a>
+          <a href="http://localhost:3000/contact">Contact</a>
+        </div>
+      </div>
+    </header>
+    <style>
+      .home-pic {
+        width: auto;
+        height: auto;
+        border-radius: 15px;
+      }
+      .home-pic-div {
+        position: sticky;
+        padding-left: 350px;
+      }
+    </style>
+    <div class="home-pic-div">
+      <p>
+        Welcome to my route testing website! hope you enjoy it as much as I have
+        making it!😜 I'm very excitied to learn express next, hopefully it all
+        goes well wish me luck!
+      </p>
+
+      <img
+        class="home-pic"
+        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        alt=" coding"
+      />
+    </div>
+    <footer class="footer-contact">
+      <strong>&copy; Devin Augot 2022</strong>
+    </footer>
   </body>
 </html>

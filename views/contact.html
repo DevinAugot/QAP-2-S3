@@ -1,12 +1,151 @@
+<!--  Author: Devin Augot 
+Date: Jan,26,2023  -->
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <style href="../styles/style.css"></style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact JavaScript Week Four</title>
+    <title>Devin Augot</title>
   </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
+    :root {
+      --Headbg: rgb(0, 0, 0);
+      --bg: rgb(255, 255, 255);
+      --light: rgba(2, 232, 232, 0.357);
+      --primary: rgb(0, 113, 174);
+      --shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+    }
+    body {
+      background-color: var(--bg);
+      display: grid;
+      gap: 25px;
+    }
+    /* Contact page */
+    .main-header {
+      display: grid;
+      width: auto;
+      height: auto;
+      background-color: var(--Headbg);
+      color: rgb(255, 255, 254);
+    }
+    #header-h1 {
+      padding-top: 1rem;
+      display: flex;
+      font-size: 2rem;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    }
+    #h1-div {
+      padding: 20px;
+    }
+
+    /* styling navlist */
+    #navlist {
+      background-color: #0074d900;
+      position: absolute;
+      width: 100%;
+    }
+    /* styling navlist anchor element */
+    #navlist a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 30px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    .navlist-right {
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      float: right;
+    }
+    /* hover effect of navlist anchor element */
+    #navlist a:hover {
+      color: aqua;
+      transition: 0.3s;
+    }
+
+    #Contact-heading {
+      width: auto;
+    }
+    .Contact-div {
+      padding-top: 20px;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      display: grid;
+      justify-content: center;
+    }
+    a {
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      color: black;
+    }
+
+    .footer-contact {
+      border-top: 1px solid;
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    }
+  </style>
   <body>
-    <h1>Where you at?</h1>
-    <h2>Stay where yer too.</h2>
+    <header class="main-header">
+      <div id="h1-div"><h1 id="header-h1">Devin Augot</h1></div>
+      <div id="navlist">
+        <div class="navlist-right">
+          <a href="http://localhost:3000">Home</a>
+          <a href="http://localhost:3000/about">About</a>
+          <a href="http://localhost:3000/products">Products</a>
+          <a href="http://localhost:3000/infoMe">Personal Info</a>
+          <a href="http://localhost:3000/subscribe">Subscribe</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </header>
+    <div class="Contact-div">
+      <h1 id="Contact-heading">LOOKING TO CONTACT ME?</h1>
+
+      <h5>
+        Email:
+        <a href="mailto:Devin.Augot@keyin.com?subject = FeedBack&body = Message"
+          >Devin.Augot@keyin.com</a
+        >
+        or
+        <a href="mailto:daugot22@gmail.com?subject = FeedBack&body = Message"
+          >Daugot22@gmail.com</a
+        >
+      </h5>
+      <h5>
+        LinkedIn Profile:
+        <a href="https://www.linkedin.com/feed/">Devin Augot</a>
+      </h5>
+      <h5>
+        My GitHub: <a href="https://github.com/DevinAugot">Devin Augot</a>
+      </h5>
+      <p>Looking forward to talking & connecting soon.</p>
+      <p>Devin</p>
+    </div>
+
+    <footer class="footer-contact">
+      <strong>&copy; Devin Augot 2022</strong>
+    </footer>
   </body>
 </html>

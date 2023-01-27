@@ -1,12 +1,152 @@
+<!--  Author: Devin Augot 
+Date: Jan,26,2023  -->
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <style href="../styles/style.css"></style>
+    <style>
+       * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
+    :root {
+      --Headbg: rgb(0, 0, 0);
+      --bg: rgb(255, 255, 255);
+      --light: rgba(2, 232, 232, 0.357);
+      --primary: rgb(0, 113, 174);
+      --shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+    }
+    body {
+      background-color: var(--bg);
+      display: grid;
+      gap: 25px;
+    }
+   /* Home Page */
+   .main-header {
+        display: grid;
+        width: auto;
+        height: 100px;
+        border: 1px solid black;
+        background-color: var(--Headbg);
+        color: rgb(255, 255, 254);
+      }
+      #header-h1 {
+        padding-top: 0.0125rem;
+        display: flex;
+        font-size: 2rem;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      #h1-div {
+        padding: 20px;
+      }
+
+      /* styling navlist */
+      #navlist {
+        background-color: #0074d900;
+        position: absolute;
+        width: 100%;
+      }
+      /* styling navlist anchor element */
+      #navlist a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 30px;
+        text-decoration: none;
+        font-size: 15px;
+      }
+      .navlist-right {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        float: right;
+      }
+      /* hover effect of navlist anchor element */
+      #navlist a:hover {
+        color: aqua;
+        transition: 0.3s;
+      }
+
+      #Contact-heading {
+        width: auto;
+      }
+      .Contact-div {
+        padding-top: 20px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        display: grid;
+        justify-content: center;
+      }
+      a {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        color: black;
+      }
+
+      .footer-contact {
+        border-top: 1px solid;
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+        .p-div{
+          padding-top: 125px;
+          text-align: center;
+          align-content: center;
+          color: black;
+        }
+        #about-img{
+          border-radius: 15px;
+
+        }
+        .img-d{
+          padding-left: 415px;
+          padding-top: 25px;
+        }
+        .footer-contact {
+        border-top: 1px solid;
+          position: sticky;
+        width: 100%;
+        bottom: 0px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+          color: black;
+      }
+      .foot-div{
+       float:bottom;
+       padding:100px;
+      }
+    </style>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About JavaScript Week Four</title>
+    <title>About Page</title>
   </head>
   <body>
-    <h1>Wadup</h1>
-    <h2>This site is all about nothing!</h2>
-  </body>
+   <header class="main-header">
+      <div id="h1-div"><h1 id="header-h1">About page</h1></div>
+      <div id="navlist">
+        <div class="navlist-right">
+          <a href="http://localhost:3000">Home</a>
+          <a href="http://localhost:3000/about">About</a>
+          <a href="http://localhost:3000/products">Products</a>
+          <a href="http://localhost:3000/infoMe">Personal Info</a>
+          <a href="http://localhost:3000/subscribe">Subscribe</a>
+          <a href="http://localhost:3000/contact">Contact</a>
+        </div>
+      </div>
+  
+      <div class="p-div">
+      <p>This site was built using HTTP create server and then routes to all the various pages, which links you can see above in the nav bar. <br> Various NPM packages/modules were used as well in conjunction with everything else deployed such as logged events to console and logs directory .  </p></div>
+  <div class="img-d"><img id="about-img" src="https://images.unsplash.com/photo-1516383740770-fbcc5ccbece0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt=""></div>
+  <div class="foot-div">
+  <footer class="footer-contact">
+    <strong>&copy; Devin Augot 2022</strong>
+  </footer></div>
+  
+    </body>
 </html>
