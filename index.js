@@ -1,48 +1,65 @@
-//we need a http server
+
 const http = require("http");
-//I like to modularize my code... so put the routes in their own file
 const routes = require("./routes.js");
+
 
 const server = http.createServer((request, response) => {
   let path = "./views/";
-  // console.log(request.url, request.method);
-  // console.log(request);
+
+  // console.logged all routes and they working perfectly
+
   switch (request.url) {
     case "/":
       path += "index.html";
       response.statusCode = 200;
+      // console.log("Home page working");
       routes.indexPage(path, request.url, response);
       break;
     case "/about":
       path += "about.html";
       response.statusCode = 200;
+      // console.log("about page working");
       routes.aboutPage(path, request.url, response);
       break;
     case "/contact":
       path += "contact.html";
       response.statusCode = 200;
+      // console.log("contact page working");
       routes.contactPage(path, request.url, response);
       break;
     case "/subscribe":
       path += "subscribe.html";
+      // console.log("sub page working");
       response.setHeader("Set-cookie", "subscription=New");
       routes.subscribePage(path, request.url, response);
       break;
-    case "/aboutMe":
-      path += "aboutMe.html";
+    case "/infoMe":
+      path += "infoMe.html";
       response.statusCode = 200;
-      routes.subscribePage(path, request.url, response);
+      // console.log("infoMe page working");
+      routes.infoMePage(path, request.url, response);
+      break;
+    case "/products":
+      path += "products.html";
+      response.statusCode = 200;
+      // console.log("prod page working");
+      routes.prodPage(path, request.url, response);
+
       break;
     case "/about-me":
-      // this is a redirect for a deprecated route
+      // this is a redirect
       response.statusCode = 301;
       response.setHeader("Location", "/about");
+      // console.log("Re-directed");
       response.end();
       break;
+
     default:
       path += "404.html";
       response.statusCode = 404;
+      // console.log("404 fired!");
       routes.fourOfourPage(path, request.url, response);
+
       break;
   }
 });

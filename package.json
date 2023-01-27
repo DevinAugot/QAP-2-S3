@@ -17,11 +17,15 @@
   },
   "homepage": "https://github.com/DevinAugot/QAP-2-S3#readme",
   "dependencies": {
+    "@cicciosgamino/openweather-apis": "^5.2.0",
     "date-fns": "^2.29.3",
     "fs": "^0.0.1-security",
     "http": "^0.0.1-security",
     "nodemon": "^2.0.20",
+    "request": "^2.88.2",
     "routes": "^2.1.0",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "weather": "^1.0.4",
+    "weather-js": "^2.0.0"
   }
 }

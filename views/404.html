@@ -1,12 +1,46 @@
+<!--  Author: Devin Augot 
+Date: Jan,26,2023  -->
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <style href="../styles/style.css"></style>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
+      :root {
+        --Headbg: rgb(0, 0, 0);
+        --bg: rgba(235, 17, 17, 0.484);
+        --light: rgba(2, 232, 232, 0.357);
+        --primary: rgb(0, 113, 174);
+        --shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+      }
+      body {
+        background: var(--bg);
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 JavaScript Week Four</title>
+    <title>404 - Page Not Found</title>
   </head>
   <body>
-    <h1>404 - Oh My</h1>
-    <h2>The web page your seek is not to be found.</h2>
+    <h1>404 - Try another route!</h1>
+    <h2>The web page your looking for doesnt exsist, Sorry!🫣</h2>
+    <h3>Click a link below to navigate to an available page!</h3>
+    <br />
+    <br />
+    <div id="navlist">
+      <div class="navlist-right">
+        <a href="http://localhost:3000">Home</a>
+        <a href="http://localhost:3000/about">About</a>
+        <a href="http://localhost:3000/products">Products</a>
+        <a href="http://localhost:3000/infoMe">Personal Info</a>
+        <a href="http://localhost:3000/subscribe">Subscribe</a>
+        <a href="http://localhost:3000/contact">Contact</a>
+      </div>
+    </div>
   </body>
 </html>
