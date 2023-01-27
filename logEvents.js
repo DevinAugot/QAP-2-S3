@@ -13,7 +13,7 @@ const logEvents = async (event, level, message) => {
     if (!fs.existsSync(path.join(__dirname, "logs"))) {
       await fsPromises.mkdir(path.join(__dirname, "logs"));
     }
-    // Include todays date in filename
+    // ensure's new date put on log file
     const fileName = `${format(new Date(), "yyyyMMdd")}` + "_httpevents.log";
     await fsPromises.appendFile(
       path.join(__dirname, "logs", fileName),
