@@ -73,6 +73,15 @@ function prodPage(path, event, response) {
     `The Products page was visited.`
   );
 }
+function newsPage(path, event, response) {
+  displayFile(path, response);
+  myEmitter.emit(
+    "route",
+    event,
+    "information",
+    `The Products page was visited.`
+  );
+}
 
 function displayFile(path, response) {
   fs.readFile(path, function (err, data) {
@@ -96,4 +105,5 @@ module.exports = {
   fourOfourPage,
   infoMePage,
   prodPage,
+  newsPage,
 };

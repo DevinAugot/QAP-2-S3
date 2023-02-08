@@ -1,16 +1,20 @@
-
 const http = require("http");
 const routes = require("./routes.js");
-
-
-const server = http.createServer((request, response) => {
+const EventEmitter = require("events");
+class MyEmitter extends EventEmitter {}
+const myEmitter = new MyEmitter();
+// This is the information feed module
+const { news } = require("./news.js");
+global.DEBUG = true;
+const server = http.createServer(async (request, response) => {
   let path = "./views/";
-
+  let newsPromise = await news();
   // console.logged all routes and they working perfectly
 
   switch (request.url) {
     case "/":
       path += "index.html";
+
       response.statusCode = 200;
       // console.log("Home page working");
       routes.indexPage(path, request.url, response);
@@ -32,6 +36,16 @@ const server = http.createServer((request, response) => {
       // console.log("sub page working");
       response.setHeader("Set-cookie", "subscription=New");
       routes.subscribePage(path, request.url, response);
+      break;
+    case "/news":
+      if (DEBUG) console.info(request.url);
+      myEmitter.emit("log", request.url, "INFO", "news site was visited");
+      response.statusCode = 200;
+      response.writeHead(response.statusCode, {
+        "Content-Type": "application/json",
+      });
+      response.write(newsPromise);
+      response.end();
       break;
     case "/infoMe":
       path += "infoMe.html";
